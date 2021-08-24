@@ -1,0 +1,90 @@
+<!DOCTYPE html  PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>[imp] Initial Response in Windows OS</title>
+</head><body><b><span style="color: #ff0000">How to analyze intitial response in Windows?</span></b><br/>
+<br/>
+We should identify where we are working <br/>
+<b>1. attacker system or<br/>
+</b><b> 2. Victim System</b><br/>
+<br/>
+RTK - Response Tool kit and list of methodologies to collect the data<br/>
+<br/>
+Volatile data are keep changing<br/>
+Categorization is important - essential &amp; Non essential data<br/>
+<br/>
+<span style="color: #007f00"><b>1. Creating a Response Toolkit<br/>
+2. Storing Information obtained during IR response<br/>
+3. Collecting volatile data<br/>
+<br/>
+</b></span><span style="color: #007f00">1. Creating Response Toolkit</span><br/>
+  1. <span style="color: #7f5100">Gathering tools <br/>
+</span><span style="color: #7f5100">  2. Preparting the toolkit<br/>
+</span><br/>
+Tools: <span style="font-size: 10pt"><b>Netcat</b>- To build Communication bertween systems. <i>Netcat</i><span style="font-family: arial"><div style="text-align: left"> is a </div></span><i>utility</i><span style="font-family: arial"><div style="text-align: left"> that is able to write and read data across TCP and UDP network connections.</div></span> </span><ul><span style="font-size: 9pt"><b><li style="list-style-type: none"/>
+</b></span></ul>
+<br/>
+<span style="font-size: 9pt"><b>CryptCat - </b>Build Encrypted Communication.<i>CryptCat</i><span style="font-family: arial"><div style="text-align: left"> is a simple Unix utility which reads and writes data across network connections, using TCP or UDP protocol while encrypting the data being transmitted</div></span></span><ul><li style="list-style-type: none"/>
+<li style="list-style-type: none"/>
+</ul>
+<br/>
+<span style="font-size: 10pt"><b>PsLogList-</b>Dump the content of event logs.<b>PsLogList</b><span style="font-family: arial"><div style="text-align: left"> retrieves message strings from the computer on which the event log you view resides</div></span> </span><ul><li style="list-style-type: none"/>
+<li style="list-style-type: none"><b>ipconfig - </b>Ip interface details</li>
+<li style="list-style-type: none"><b>PsInfo </b>- Collect information about the local system</li>
+<li style="list-style-type: none"><b>PsService - </b>Current process, services and threads</li>
+<li style="list-style-type: none"><b>Auditpol - </b>Audit informations</li>
+</ul>
+    <b>dosKey</b>- Command History of the currently openend cmd<br/>
+<b>   psLoggedOn -</b>Local users<b><br/>
+</b><b>    rasusers - </b>list users with remote access<br/>
+    <b>netstat [builtin]</b>- All the listening ports &amp; internet<br/>
+<span style="color: #7f0000">H.W = Give Definition for each and every tools<br/>
+<br/>
+</span><span style="color: #7f0000">Fport - </span><span style="font-size: 8pt"><span style="font-family: arial"><div style="text-align: left">This command line </div></span><i>tool</i><span style="font-family: arial"><div style="text-align: left"> shows which application opened TCP and UDP ports that are currently opened</div></span> </span><span style="color: #7f0000"><br/>
+</span><span style="color: #7f0000"><br/>
+</span><span style="color: #7f0000">pslist- </span><span style="font-family: arial"><span style="font-size: 14pt"><div style="text-align: left"> </div></span><div style="text-align: left"><span style="font-size: 10pt">The </span></div></span><span style="font-size: 10pt"><i>pslist</i><span style="font-family: arial"><div style="text-align: left"> command lists the current processes running in memory.</div></span>view process CPU and memory information, or thread statistics. What makes</span> <span style="font-family: arial"><span style="font-size: 14pt"><div style="text-align: left"><br/>
+</div></span></span> <span style="color: #7f0000"><br/>
+</span><span style="color: #7f0000">listdll - </span>ListDLLs is a utility that reports the DLLs loaded into processes. You can use it to list all DLLs loaded into all processes, into a specific process<br/>
+<span style="color: #7f0000"><br/>
+</span><span style="color: #7f0000">mptstat-<span style="font-size: 10pt"/></span><span style="font-size: 10pt"><b>mpstat</b><span style="font-family: urw-din"><div style="text-align: left"> is a command that is used to report processor related statistics. It accurately displays the statistics of the CPU usage of the system. It displays information about CPU utilization and performance. It initializes the first processor with CPU 0, the second one with CPU 1, and so on.</div></span> </span><span style="color: #7f0000"><br/>
+</span><span style="color: #7f0000"><br/>
+</span><span style="color: #7f0000">arp: [inbuilt]: </span><span style="font-size: 10pt"><b>arp command</b><span style="font-family: urw-din"><div style="text-align: left"> manipulates the System’s ARP cache. It also allows a complete dump of the ARP cache. ARP stands for Address Resolution Protocol. The primary function of this protocol is to resolve the IP address of a system to its mac</div></span> </span><br/>
+<span style="color: #7f0000"><br/>
+</span><span style="color: #7f0000">kill: [taskkill]</span>This command has got options to kill a task/process either by using the process id or by the image file name<br/>
+<span style="color: #7f0000"><br/>
+</span><span style="color: #7f0000">md5sum:[inbuilt in unix] </span><span style="font-size: 10pt"><b>md5sum </b><span style="font-family: Arial"><div style="text-align: justify">produces for each input file a 128-bit &quot;finger-print&quot; or &quot;message-digest&quot; or it can check with the output of a former run whether the message digests are still the same</div></span></span><span style="color: #7f0000"><br/>
+</span><span style="color: #7f0000"><br/>
+RMCshare:<br/>
+<br/>
+</span><span style="font-size: 12pt"><b><span style="color: #7f5100">2. Preparing the toolkit</span><br/>
+</b></span><b><br/>
+four steps<br/>
+1. Label the media (Response toolkit media)<br/>
+</b><b>  </b>Case number, Time $ Date, Name of the investigator, Who created the media, Name of the investigator who is using the response media<br/>
+<b>2. Check for dependencies</b><br/>
+  Determine which dlls [Dynamic linked Libraries]<br/>
+  Determine which DLL are dependent on<br/>
+<b>3. Create a checksum for a toolkit<br/>
+</b><b>4. Write-protect the response media </b>- Modifications are not allowed<br/>
+<br/>
+________________________________________________<br/>
+<span style="color: #007f00"><b>2. Storing Info obtained during IR</b></span><br/>
+ =&gt; Four options - Hard drive, Notebook, Removable Media, <b>Remote forensic system = Netcat and cryptcat<br/>
+</b><br/>
+<span style="color: #007f00"><b>3. Collecting Volatile data:</b></span><br/>
+1 . Executing a trusted cmd.exe [cmd should be installed by you]<br/>
+2. Recording system time &amp; date [When attack happened]<br/>
+3. Determine who are all have logged in <b>[psloggedon] </b>&amp; remote users list<b>[rawusers]</b><br/>
+4. Record the modification, creation, accessing times of all files <b>[Dir]</b><br/>
+5. Determining the open ports <b>[netstat]</b><br/>
+6. Listing of all the applications that associated with the open ports<br/>
+7. Listing of all running processes<br/>
+8. Listing of recent connections<br/>
+9. Recording the system time &amp; date [Investigation time]<br/>
+10. Documenting the command lists <b>[history/doskey]</b><br/>
+<br/>
+Essential data = Content location, filename,pointer from filename to metadata<br/>
+Non-Essential = access control, permissions<br/>
+<br/>
+<br/>
+</body></html>

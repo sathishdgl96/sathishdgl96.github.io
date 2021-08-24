@@ -1,0 +1,53 @@
+<!DOCTYPE html  PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>file allocation methos</title>
+</head><body><b>Contigous allocation:<br/>
+  All logical blocks of a file get the contigious physical block in Secondary storage<br/>
+ File system: Gives details about the file, when created, organizing<br/>
+</b><br/>
+<b>Advantages:</b><br/>
+1. Fast Read <br/>
+2. Supports Random Access<br/>
+<br/>
+<b>Disadvantages</b><br/>
+1. Disk Fragementation<br/>
+2. Difficult to increase the file size<br/>
+<br/>
+<br/>
+<b>Linked List Allocation:<br/>
+</b>Need not to be contiguos<br/>
+Have file pointer<br/>
+<br/>
+<b>Advantages:<br/>
+</b><br/>
+1, No external Fragementation<br/>
+<br/>
+<b>Disadvantages:</b><br/>
+1. Random access not possible<br/>
+2. pointer require space<br/>
+3. pointer should not be broken<br/>
+4. need to traverse all block<br/>
+<br/>
+<b>File Allocation Table:</b><br/>
+<br/>
+There will be head block to point to start<br/>
+<br/>
+<b>Disadvantages:</b><br/>
+1. Each disk blocj need fat entry<br/>
+<br/>
+<br/>
+<br/>
+<b>Indexed Allocation Scheme:<br/>
+</b>One block alloted to index all the block address<b><br/>
+</b><b><br/>
+Advantages:<br/>
+</b>1. Support Direct access<br/>
+2. If block damaged, only that block data will be lost<br/>
+<br/>
+<b>Disadvantage:</b><br/>
+1. Bad Index block will result in entire file loss<br/>
+2. Index block space is waste<br/>
+<br/>
+<br/>
+</body></html>

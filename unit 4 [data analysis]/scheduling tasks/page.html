@@ -1,0 +1,56 @@
+<!DOCTYPE html  PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>scheduling tasks</title>
+</head><body><b>Scheduled task</b><br/>
+Schedule a process execution at particular date and time<br/>
+<b><br/>
+</b><b>2 commands:</b><ul><li style="list-style-type: none"><b>at </b> -&gt; Only with admin previlage, follows local time of victim [at 17:00 /every monday]</li>
+<li style="list-style-type: none"><b>schtasks -&gt;</b></li>
+</ul>
+<br/>
+attackers use this to schedule their tasks<br/>
+<br/>
+File named JOB Files =&gt; with extension .job [Contains config datea about the scheduled tasks]<br/>
+<br/>
+<b>This Job available at % SYSTEM ROOT %/Tasks/</b><br/>
+<br/>
+<br/>
+<b>Security Logs</b><br/>
+User and filepath of the particular exe file,<br/>
+Task Scheduler logs are available at<b>% SYSTEMROOT % / Task / ScheduledLog.txt</b><br/>
+<br/>
+<b>Windows Registry:<br/>
+	 Config Data = OS, Application<br/>
+    Hives =&gt; System specific hives and user specific hives<br/>
+</b>User specific -&gt; For a specific there will be one hive, User profile and history of activites<br/>
+<b>TimeStamp: </b>Last write time [Specific for keys]<br/>
+<br/>
+<b>System hives: =&gt; 5 Hives<br/>
+</b>1. System<br/>
+2. Security<br/>
+3. SAM<br/>
+4. Software<br/>
+5. DEFAULT<br/>
+No extension<br/>
+<br/>
+<b>User Hives<br/>
+1. User Profile and User Activity<br/>
+</b>1. . DAT Extension<br/>
+2. .\User\Usernam\NTUUser.DAT<br/>
+<br/>
+Whenever user is created, the hive will be created. If the attack is happeneing over the network, analysing the user hives may not be beneficial<br/>
+<br/>
+<b>Tools for registry analyzer<br/>
+</b>1. RegRipper<br/>
+2. Window Registry decoder<br/>
+3. AutoRun<br/>
+4. RedLine<br/>
+<br/>
+Hive contains Key, value, date<br/>
+Every key will have subkeys<br/>
+<br/>
+ROOT, Current_User, HKEY_USERS<br/>
+<br/>
+<br/>
+<b>H.W: Investigating the MAC OS</b></body></html>

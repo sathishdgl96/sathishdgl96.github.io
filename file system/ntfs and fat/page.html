@@ -1,0 +1,56 @@
+<!DOCTYPE html  PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>NTFS and FAT</title>
+</head><body>Partittion: Hardware space partitied into managable spaces<br/>
+<b><br/>
+</b><b>MBR - Master Boot Record </b><ul><li style="list-style-type: none">Partition records are stored here( How many parition are there, space)</li>
+<li style="list-style-type: none">Partition Magic</li>
+</ul>
+<br/>
+<b>FAT - File Allocation Table<br/>
+NTFS - New technology file system<br/>
+</b><ul><li style="list-style-type: none">1. The outermost track has FAT database</li>
+<li style="list-style-type: none">2. Filenames, directory names, date ,cluster numbers and file attributes </li>
+<li style="list-style-type: none">Max: 16MB</li>
+</ul>
+<br/>
+<b>FAT Versions:</b>FAT12 (16MB), FAT16, FATX(for Xbox) and VFAT - Based on file types<br/>
+<br/>
+Cluster size varies according to file system and hard disk size <br/>
+<br/>
+<b>Drive Slack<br/>
+</b><b>Fragementation - Internal and External Fragementation</b><br/>
+Suppose if it''s indexed allocation - Both internal &amp; External Fragementation<br/>
+<b>Unused space in a cluster is called drive slack</b><br/>
+<br/>
+<b>Deleting FAT Files<br/>
+</b><b/> When deleting a file, filename in FAT is replaced with sigma <br/>
+ A link to clusters will be set to zero<br/>
+ All the changes will be done only in FAT Database<br/>
+  <b>Data will be available in a disk itself ( Just marked as unallocated) <br/>
+</b><b><br/>
+Free Space Management System:<br/>
+</b><b> </b>All the free space information is availale in this system.<br/>
+<br/>
+_______________________________________________________<br/>
+<br/>
+<b>NTFS - New technology File System</b><ul><li style="list-style-type: none">It provides more information about a file</li>
+<li style="list-style-type: none">More control over files and folders</li>
+</ul>
+<br/>
+1st Sector - Parition boot sector ( In a outermost track)<br/>
+Next Master File Table (MFT) - first 15 records are for OS<br/>
+<br/>
+U<b>nicode </b>- Most of the characters are recognized by unicode ( For most language)<br/>
+<br/>
+<b>Master File Table - </b>Records in MFT are metadata <br/>
+<br/>
+<u><br/>
+<b>HomeWork : Comparision between FAT and NTFS ( Detailed Analysis)<br/>
+<br/>
+</b></u><b>Each record is 1024 bytes - </b>Attributes are separated as fixed size<br/>
+<b>Resident and Non Resident</b>- If record file is there in disk is called resident<br/>
+<b>MFT attributes</b>- Refer Internet <br/>
+<br/>
+</body></html>

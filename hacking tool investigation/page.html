@@ -1,0 +1,62 @@
+<!DOCTYPE html  PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Hacking tool investigation</title>
+</head><body>Intention of the hacker is different <br/>
+Trying to extract information and perform malicious software installation<br/>
+<br/>
+We may not aware the purpose of the particular file<br/>
+ =&gt; WIth previous behaviour of a file, we may come into some conclusion of a exe file<br/>
+<br/>
+With Source Code it is easy to understand the purpose of the exe file<br/>
+But .exe are available as binary file only<br/>
+In a exe file, name may give some clues <br/>
+<br/>
+<br/>
+You identified some tool as malicious<br/>
+=&gt; Evidence<br/>
+=&gt; Pathway - damage level can be done<br/>
+=&gt; Investigating the hacking tools<br/>
+<br/>
+<b>Source code =&gt; Complier =&gt; object code<br/>
+5 ways of compiling</b><ul><b><li style="list-style-type: none"/>
+</b><li style="list-style-type: none"><b>1. statically linked program</b> = All modules are available in a single module [Standalone , no dependency], Capable of executing in any version of the OS</li>
+<li style="list-style-type: none">gcc - static zap.c</li>
+</ul>
+<b><br/>
+</b><ul><li style="list-style-type: none"><b>2. Dynamically linked program = </b>use shared library to execute [Making use of existing library routines]. Easy to transmit</li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"><b>3. Programs compiled with debug options </b>= Normally given in a developement environment. </li>
+<li style="list-style-type: none">gcc -g zap.c -o zap debug</li>
+<li style="list-style-type: none">Depending on the debugging level, the gcc will give information</li>
+<li style="list-style-type: none"/>
+<b><li style="list-style-type: none">4. Stripped Programs</li>
+</b><li style="list-style-type: none"><b>Strip </b>is a function that deletes all symbols and exe file will be smaller . If dynamically linked and stripped file are combined then the prgram will be extremely small</li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none">nm is a command to bring back symbols [TO make unstripped]</li>
+<li style="list-style-type: none">strip is a cmd to make file stripped</li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"><b>5. Compliation with UPX [ultimate packers for executables]</b></li>
+<li style="list-style-type: none">Due the compression methodology follows, the file size be smaller</li>
+<li style="list-style-type: none">less clues</li>
+<li style="list-style-type: none">Popular among attackers</li>
+<li style="list-style-type: none">win32 applications, dos 16-bit exe, dos 32 bit exe</li>
+</ul>
+<b><br/>
+Two types of analysis<br/>
+</b>1. Static analysis - can be used to analyse any type of file . Mostly [exe]<br/>
+Steps:<ul><li style="list-style-type: none"><b>1. Determine the type of file -</b>Where it produced [In which platform, architecture] and compilation method</li>
+<li style="list-style-type: none"><b>2. Review the ascii and unicode strings </b>- [Keywords used, kind of naming conventions for variables and files, Was there any cmd arguements. Strings ]</li>
+<li style="list-style-type: none">String -a filename [gives you the strings avaiable in a file]</li>
+<li style="list-style-type: none">3. Find a tool and compare that with your tool and try to get source tool</li>
+<li style="list-style-type: none"><b>4. Perform source code review</b></li>
+</ul>
+<b><br/>
+[Just look into the exe]<br/>
+<br/>
+2. Dynamic analysis<br/>
+</b>Execute the programs and find what are the system calls it performs. Check whether there is any abnormality in network traffic. <br/>
+Be careful when executing [May affect your system]<b><br/>
+</b><b>Monitor the windows registry, system calls<br/>
+<br/>
+Incident response 2nd edition</b></body></html>

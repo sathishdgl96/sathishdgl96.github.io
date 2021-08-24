@@ -1,0 +1,115 @@
+<!DOCTYPE html  PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Incident</title>
+</head><body><b>Negative Events:</b><br/>
+Threatening<br/>
+Unauthorized access<br/>
+Malwares<br/>
+<br/>
+<b>Impact of Incident</b><br/>
+<ul><li style="list-style-type: none">Money will be lost</li>
+<li style="list-style-type: none">Need to rebuild entire infrastructure</li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none">G<b>oals of IR Team</b></li>
+<li style="list-style-type: none">1. Removing the threat</li>
+<li style="list-style-type: none">2. Minimizing the damages</li>
+<li style="list-style-type: none">3. Restoring Normal Operations</li>
+<li style="list-style-type: none"/>
+<li style="list-style-type: none"><b>To Achieve these Goals</b></li>
+<li style="list-style-type: none">1. Investigate and remediate - what tools used, how happened, root cause, Ongoing or completed, How long it might be happened, purpose of an attack., Restoring the normal operation</li>
+</ul>
+<br/>
+<b>Investigation Team<br/>
+<br/>
+</b>-&gt; legal, HR, Compliances, Network IR Analysts, Business Line Managers, IT Support<br/>
+<br/>
+<br/>
+__________________________________________________________________________________________________<br/>
+<br/>
+<b>IR Process:<br/>
+<br/>
+Involved with three main activites<br/>
+</b>1. Initial Response<br/>
+2. Investigation<br/>
+3. Remediation<br/>
+<br/>
+<b>1. Initial Response:</b><ul><li>Assemble the team</li>
+<li>Reviewing Readily available data</li>
+<li>Identify the type of incident</li>
+<li>Asses the impact of the incident</li>
+</ul>
+Everything should be documented<br/>
+<b>2. Investigation:<br/>
+</b>Answering these questions ... What, Who, How happened ?<br/>
+Initial Leads -&gt; Indicator of Comprosimed (IOC) -&gt; Deploy IOC -&gt; Identify System of Interest -&gt;Collect Evidences -&gt;Analyse Data <br/>
+<ul><li style="list-style-type: none"><b>1. Initial Leads = Identify the intial clues (Recognize the type of incident)</b></li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none"><ul><li style="list-style-type: none">A good lead must be relevant, detailed, Actionable</li>
+</ul>
+</li>
+</ul>
+</li>
+<li style="list-style-type: none"><b>2. IOC - Indicators of compromised </b></li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none"><ul><li style="list-style-type: none">Some Compromised have been occured in a system = Every contact leaves a trace </li>
+<li style="list-style-type: none"><b>Defintion:</b>IOC is an artifact observed on a network or os that with high confidence indicates a computer intrusion Eg: Virus Signatures, Ip adrresses, URL, Domain Names</li>
+<li style="list-style-type: none">Process of documenting in a structured manner</li>
+<li style="list-style-type: none">Tools: <b>YARA, Mandiant's, mitre's</b></li>
+</ul>
+</li>
+</ul>
+</li>
+<li style="list-style-type: none">IOC can be collected from individual system or in a network</li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none"><ul><li style="list-style-type: none">Ways of Collecting IOC</li>
+<li style="list-style-type: none">1. Monitoring a network</li>
+<li style="list-style-type: none">2. Unnecessary I/O write</li>
+<li style="list-style-type: none">3. Geographical Irregularities</li>
+<li style="list-style-type: none">4. Anything that can un usual</li>
+</ul>
+</li>
+</ul>
+</li>
+<li style="list-style-type: none">3. <b>Deploy IOC</b></li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none">Collections and reporting should be done automatically</li>
+<li style="list-style-type: none"/>
+</ul>
+</li>
+<b><li style="list-style-type: none">4. Identify System of Interest</li>
+</b><li style="list-style-type: none"><ul><li style="list-style-type: none">Getting the hits from the IOC (Above the threshold)</li>
+<li style="list-style-type: none">1. Validate - Whether SOI is reliable or not</li>
+<li style="list-style-type: none">2. Categorize - SOI should be categorized</li>
+<li style="list-style-type: none">3. Priotize - Highest prority Hits should be priotize</li>
+<li style="list-style-type: none"/>
+</ul>
+</li>
+<b><li style="list-style-type: none">5. Collect and preserve Evidences:</li>
+</b><li style="list-style-type: none"><ul><li style="list-style-type: none">Collect Additional Evidences to justify the suspicion</li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none"><b>Investigation Preservation</b></li>
+<li style="list-style-type: none">1. Live response</li>
+<li style="list-style-type: none">2. Memory Collection - Main Memory ( Incase of rootkit)</li>
+<li style="list-style-type: none">3. Forensic DIsk image - Duplicating Disk And Preserving Evidence</li>
+</ul>
+</li>
+<b><li style="list-style-type: none"/>
+</b></ul>
+</li>
+<b><li style="list-style-type: none">6. Analysing the Data</li>
+</b><li style="list-style-type: none"><ul><li style="list-style-type: none">Try to answer the questions (What, How, Who)</li>
+<li style="list-style-type: none">Malware Analysis</li>
+<li style="list-style-type: none">Live Response analysis - More opportunity to collect leads</li>
+<li style="list-style-type: none">Forensic Examination - Disk</li>
+<li style="list-style-type: none"><ul><li style="list-style-type: none"/>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<b>3. Remediation:<br/>
+</b>Legal, political, business actions<br/>
+Timing is a crucial - Not too early (You will get enough data) , too late ( Damages will be more)<ul><li style="list-style-type: none"><ul><li style="list-style-type: none"><b>Three methods:</b></li>
+<li style="list-style-type: none">1. Postering - Establish a new protocol, exchanging the contact info, designating the responsibilites, scheduling resources, co-ordinating timeline</li>
+<li style="list-style-type: none">2. Tactical - Address the current situation and react for it ( Short term remidation) (blocking ip address, informing the customers, changing passwords)</li>
+<li style="list-style-type: none">3. Strategy - Similar incident should not happen again (Long term Remediation ) - requires changes in an organization </li>
+</ul>
+</li>
+</ul>
+</body></html>

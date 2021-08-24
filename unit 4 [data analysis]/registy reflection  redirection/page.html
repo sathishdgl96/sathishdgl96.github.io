@@ -1,0 +1,70 @@
+<!DOCTYPE html  PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Registy Reflection &amp; Redirection</title>
+</head><body>WOW64 Sub System for ensures compatability of 32 bit architecture in win64 os<br/>
+<br/>
+<b>Registry Analysis:<br/>
+</b><b><span style="color: #007f00">1. Sys. Config Registry key</span></b><span style="color: #007f00">: -</span>Using GUI / No. of keys are huge and identification of correct key is important<ul><li style="list-style-type: none">HKLM\System\CurrentControlSet\Control\Computername</li>
+</ul>
+<b><br/>
+</b><b><span style="color: #007f00">2.Shim Cache:</span></b><br/>
+Application Compactability Cache: Track executable files that may require special compatability settings<b><br/>
+</b><b>Information :</b><br/>
+Filename- FullPath - Lastmodified Date - Size of the file (Bytes) - Excecuted or not <br/>
+Location vary from windows from windows<br/>
+<br/>
+Shimcache is like prefetch and has more size. Even execution not started file will be there in shimcache<b><br/>
+</b><b>ShimCacheParser.py<br/>
+<br/>
+<span style="color: #007f00">3. Auto Run Keys:</span><br/>
+</b>Autostart, Extensibility points, Resistance Mechanism keys. <br/>
+Attacker adds new keys into autorun.so that MALWARES Executed automatically<br/>
+Evidences regarding malwares are availble<br/>
+Some Services will be <b>executed automatically</b>and such information avaiable in a autorun<b><br/>
+</b><b>When System boot or an event - Automatic<br/>
+<br/>
+</b><b>Three logon accounts:</b><br/>
+1. Local system - Unrestricted<br/>
+2. Network service - Moderate<br/>
+3. Local Server - Most Restricted<b><br/>
+</b><b><br/>
+<span style="color: #007f00">4. User hive Registry Keys<br/>
+</span></b><b><span style="color: #007f00"/></b>Evidence specific to setttings or behavior specific to individual accounts <br/>
+Most recent application the user used<br/>
+For specific users, there will be one user hive registry<br/>
+<b>1. Shellbase keys</b>- User profile registry hive<br/>
+2. User Assitant keys - Track Application that user launched during his windows explorer<br/>
+ If you decode, you will have information to full path to exe. file and number of times the program has executed and last execution time<br/>
+<br/>
+[This tracks for particular user only and only tracks application openend via explorer (Those start menu and explorer). However prefetech cache all program ]<br/>
+<b><br/>
+3. MUI Cache <br/>
+4. MRU (Most recently Used) keys<br/>
+5. Start menu, Run menu<span style="color: #007f00"><br/>
+</span>6 Recent Docs<br/>
+7.Retyped URL's and typed Paths<br/>
+8. Remote Desktop MRU<br/>
+<br/>
+</b><b>Tools:</b><br/>
+[RegRipper, Windows Registry decoder, AutoRuns, RedLine]<b><br/>
+</b><b><br/>
+Other Aritifacts of interactive sessions<br/>
+1. LNK Files - Link Files <br/>
+</b> =&gt; Filename with extension .lnk<b><br/>
+</b> =&gt; Creating shortcuts<br/>
+It has info about full filepath, Network share name, Serial no. for the source volume , Size information , MAC Timestamp of an original file<br/>
+<br/>
+<b>2. JUMPLIST</b><br/>
+- MS Outlook [Create ] information related to most recently used [Application specific]<br/>
+<br/>
+<b><br/>
+3.RECYCLE BIN<br/>
+- Storage area where deleted files will be there<br/>
+- Introduced in windows 95<br/>
+- Gives the option to restore in a orginal location<br/>
+- D&lt;Driveletter&gt;&lt;Indexno&gt;.&lt;Fileextension&gt;<br/>
+      - Indexno - No. of deleted files available there<br/>
+      - File extension is same as original file extension<br/>
+<br/>
+Memory Forensics and MAC OS</b></body></html>

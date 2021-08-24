@@ -1,0 +1,51 @@
+<!DOCTYPE html  PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Network Monitoring</title>
+</head><body><b>Why do we need network montoring?</b><br/>
+ To figure out suspicious activities [To confirm ]<br/>
+ To gather extra evidences<br/>
+ Scope of compromised can be verified with n/w<br/>
+ Who are all / which machines are involved in attack or event<br/>
+ When happened, or timestamp<br/>
+<br/>
+<b>Levels of n/w monitoring:<br/>
+</b><br/>
+According to IR, <b>4</b>levels<br/>
+ <b>1.</b>Event based alerts [Intrusion detections]<br/>
+ 2. Levels <b>2</b>and <b>3</b>= collecting packets and sessions [Header capture and full packet logging]<br/>
+<b> 4.</b>Statistical analysis =&gt; Results can be visualized [Statistical modelling ]<br/>
+<br/>
+1. Event based alerting - can be helpful to identfy the affected computers quickly<br/>
+<br/>
+2. Header captures - Can be helpful incase of data theft, useful to submit as evidence<br/>
+<br/>
+4. statistical analysis can be helpful if we work on a large data<br/>
+<br/>
+<br/>
+<br/>
+<span style="color: #007f00"><b>1. Event based alert monitoring:<br/>
+</b></span><br/>
+=&gt; usually done by IT professional, we will have set of rules or threshold<br/>
+=&gt; Whenever that crosses, it alerts<br/>
+=&gt; NIDS [Network intrusion detection system]<br/>
+=&gt; S/w Tools that supports event based monitoring<br/>
+=&gt; <b>Tools:</b>snort, suricate, RSA Netwitness [works based on signatures/ indicators]<br/>
+       - Can be simple [based on tcp packets] or complex rules [String matching, pattern matching]<br/>
+<br/>
+<span style="color: #007f00"><b>2. Header and full packet logging:<br/>
+</b></span><b>=&gt;</b><span style="color: #191919">To collect full data<br/>
+</span><span style="color: #191919">=&gt; Evidences to support for internal investigations<br/>
+</span>=&gt; Additional care is needed to store the collected data [Should be encrypted]<br/>
+=&gt; We are collecting everything[A- Z], Whenver you do perform analysis then remove un neccessary<br/>
+=&gt; Tcp dump, wireshark<br/>
+<br/>
+<span style="color: #007f00"><b>3. Statistical Modelling<br/>
+</b></span><span style="color: #007f00">=&gt; </span>Net flow data<br/>
+=&gt; Softwares that captures header info over the period of time and intrepreted as statistics<br/>
+=&gt; Pattern flow <br/>
+=&gt; linkck<br/>
+=&gt;Fluke, Hp,Solarwinds and IBM offers Netflow analysis products<br/>
+=&gt; For eg: During the particular interval, significant amount of data left?<br/>
+<br/>
+</body></html>

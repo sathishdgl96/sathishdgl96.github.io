@@ -1,0 +1,29 @@
+<!DOCTYPE html  PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Types of file system</title>
+</head><body><b>Three Types:</b><br/>
+<br/>
+1. HFS - MAC Os ( HFS standarad and HFS+ )<br/>
+2. FAT- File allocation Table (DOS and Earlier Windows)<br/>
+3. NTFS - MS Windows ( Upto Windows 10)<br/>
+<br/>
+<b>Security by File System:<br/>
+</b><b>1. Access Control - </b>Modify, Delete<b><br/>
+</b><b>2. BackUp &amp; Recovery - </b>When Corruption<br/>
+<br/>
+<b>Various Attacks:<br/>
+</b><b>1</b>. <b>Race Condition Attacks</b>- Some Sequence of operational [ P1 Executing O1, O2 and O3 - each is atomic<ul><li style="list-style-type: none">In between O2 and O3 some attack happening, O3 will work on a corrupted copy of O2</li>
+</ul>
+<br/>
+2. <b>Using ADS to hide Files</b><ul><li style="list-style-type: none"><b>- </b>Alternate Data Streams(ADS) </li>
+<li style="list-style-type: none">- Behind the files, there will be hidden files ( Multiple data items will be attached)</li>
+<li style="list-style-type: none">- Attaching multiple files behind the file ( Wasting of space)</li>
+<li style="list-style-type: none"/>
+</ul>
+<br/>
+3. <b>Directory Traversal </b><ul><li style="list-style-type: none">- Exploitation caused by poor validation in the file system</li>
+<li style="list-style-type: none">- Able to track password and files available in the file system</li>
+<li style="list-style-type: none">- Allowing anyone to access any files</li>
+</ul>
+</body></html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html  PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Discovering Electronic Evidence</title>
+</head><body><b>Approach to convert the data into evidence:<br/>
+</b><ul><li style="list-style-type: none">1. Define and understand the objectives</li>
+<li style="list-style-type: none">2. Towards Objectives, collect some relavant data</li>
+<li style="list-style-type: none">3. Inspect or analyze the data content</li>
+<li style="list-style-type: none">4. If necessary go for format convertion and normalization</li>
+<li style="list-style-type: none">5. Choose a methos to do analysis</li>
+<li style="list-style-type: none">6. Perform analysis</li>
+<li style="list-style-type: none">7. Evaluate</li>
+<li style="list-style-type: none"/>
+</ul>
+These steps are iterative...<br/>
+<br/>
+<b><span style="color: #007f00">1. Objectives:</span><br/>
+</b>know the situations and technologies available at the incident spot<br/>
+What are we looking for<br/>
+draw conclusion<br/>
+How long it will take to complete the analysis<br/>
+What are the resource need<br/>
+What are the people who are interested in my results [Who need the results &amp; how are they going to process my results]<br/>
+Leadership - A Team of people will be working in a analysis [This prevents mis understandings and focus]<br/>
+Objectives should be focused on not proving a negative [Eg: Prove that there are possible for compromisation ]<br/>
+<br/>
+You must ask only realistic question [Is there any malware present - Non realistic at the beginning; is file present - Realistic ]<br/>
+<br/>
+<b>Scope of an objective:</b>Should not be too vague [looking at entire hard disk, full inbox]<br/>
+=&gt; to be particular hard disk , or particular inbox<br/>
+<br/>
+These must be asked to all the stalkholders involving in a incident<br/>
+<b><br/>
+</b><b>Know your data: </b>Where is your data? In a server, cloud, hard drive<br/>
+, Laptop, Mobile Device, Are you dealing with firewall data, cloud services, networking devices<br/>
+<br/>
+<b>Types of evidence: <br/>
+1. Operating system evidences - <br/>
+<br/>
+</b><b>1. NTFS, FAT, HFS</b>[Info about active, deleted files, unallocated space, or file slack, or parition table]<b><br/>
+</b><b>2. State Information - </b>Threads and Processes information / Port state info<br/>
+<b>3. OS logs: - </b>Log information<b><br/>
+</b><b>4. Os Specific data sources<br/>
+<br/>
+2. Applications:<br/>
+</b>1. Browser cache<br/>
+2. Web server logs<br/>
+3. User preferences<br/>
+4. Email client files<br/>
+Usually applications will be uninstalled after crime, but traces will be left<br/>
+<br/>
+<b>3. User data</b><br/>
+1. From doc, emails, source codes<br/>
+2. From web servers<br/>
+<br/>
+<b>4. Network/ Instrumentation data:<br/>
+</b>1. Network flow data<br/>
+2. firewalls<br/>
+3. Proxy Servers<br/>
+<b><br/>
+Accessing the data:<br/>
+</b>1. Collected data mostly not understandable - tools available to decrypt/decode<br/>
+2. Keep asking questions like what is the purpose of holding data [ftkimager, encase]<br/>
+<br/>
+<b>Analyse your data:<br/>
+</b>=&gt; Imagine a data theft case, we gathered evidence from network analmolies or from common host based artifacts<br/>
+<br/>
+for network anamolies, you should analyse network flow data [Unsual Traffic or attempts, proxy logs]<br/>
+<br/>
+<br/>
+Common host based anamolies:<br/>
+=&gt; unusual geographical locations<br/>
+=&gt; Odd connection hosts<br/>
+=&gt; Anything abnormal - in CPU utlization [Any compression happened]<br/>
+=&gt; Recently installed and uninstalled app<br/>
+=&gt; look for malwares<br/>
+=&gt; Virus scan applications - Abnormal login time<br/>
+<b><br/>
+<br/>
+<br/>
+<br/>
+</b></body></html>
